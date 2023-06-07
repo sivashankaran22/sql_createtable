@@ -1,0 +1,33 @@
+<-----Create table---->
+
+1.create table movie (Id primary key, Movie Title text,director text, images text);
+2.create table Artist (ArtistName text,id forigen key);
+3.create table Reviews (id int,movie text,reviews text);
+
+<-----Insert Values---->
+
+Movie table:
+
+1.insert into movie values (1,"Cars","john lasseter","https://www.imdb.com/title/tt0317219/mediaviewer/rm3508506368/?ref_=tt_md_3"),
+(2,"Home Alone","Chris Columbus","https://www.imdb.com/title/tt0099785/mediaindex/?ref_=tt_mi_sm"),
+(3,"Spy Kids","Robert Rodriguez","https://www.imdb.com/title/tt0227538/mediaindex/?ref_=tt_mi_sm"),
+(4,"Sky High","Mike Mitchell","https://www.imdb.com/title/tt0405325/mediaindex/?ref_=tt_mi_sm"),
+(5,"The Angry Birds","Clay Kaytis","https://www.imdb.com/title/tt1985949/mediaindex/?ref_=tt_mi_sm"); 
+
+Artist table:
+
+insert into Artist values ("Owen Wilson",1),("Macaulay Culkin",2),("Daryl Sabara",3),("Michael Angarano",4),("Jason Sudeikis",5);
+
+Review Table:
+
+insert into Reviews values (1,"Owen Wilson","https://www.imdb.com/title/tt0317219/?ref_=ext_shr_lnk"),
+(2,"Macaulay Culkin","https://www.imdb.com/title/tt0099785/?ref_=ext_shr_lnk"),
+(3,"Daryl Sabara","https://www.imdb.com/title/tt0227538/?ref_=ext_shr_lnk"),
+(4,"Michael Angarano","https://www.imdb.com/title/tt0405325/?ref_=ext_shr_lnk"),
+(5,"Jason Sudeikis","https://www.imdb.com/title/tt1985949/?ref_=ext_shr_lnk");
+
+
+<-----Select Query---->
+
+select Movie,director,ArtistName from Movie join Artist on Movie.Id = Artist.id;
+	
